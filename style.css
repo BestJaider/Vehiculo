@@ -1,0 +1,76 @@
+section{
+    display: flex;
+    justify-content: center;
+}
+.fondo{
+    background-image: url(/Imagenes/fondo.jpg);
+    width: 50%;
+    height: 28.2rem;
+ }
+ .mover{    
+    animation: move_fondo 2s  linear infinite ;
+
+ }
+ .moto{
+    display: flex;
+    position: relative;
+    top: 100px;
+    left: 200px;
+
+ }
+ .moto img{
+    width: 400px;
+    height: 300px;
+ }
+.rueda-i {    
+    position: absolute;   
+    left: 700px;
+    top: 280px;
+    
+}
+.rueda-move {        
+    animation: move_rueda-i 0.5s  linear infinite;
+}
+.rueda-i img{
+    height: 130px;
+}
+
+.rueda-d {
+    position: absolute;   
+    left: 980px;
+    top: 280px;
+    
+}
+
+.humo{
+    background-image: url(./imagenes/gaseosa.png);
+    position: absolute;   
+    left: 490px;
+    top: 280px;
+    height: 170px;
+    width: 100px;
+    animation: move_humo 1s infinite steps(4);
+}
+.rueda-d img{
+    height: 130px;
+}
+.ocultar{
+    display: none;
+}
+
+@keyframes move_rueda-i {
+    100% {
+            transform: rotate(360deg);
+    }
+}
+
+@keyframes move_fondo {
+    100% {
+            background-position-x: -1850px;
+    }
+}
+@keyframes move_humo {
+    100%{
+        background-position-x  :-356px ;
+    }
+}
